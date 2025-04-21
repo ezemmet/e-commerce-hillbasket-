@@ -9,9 +9,7 @@
 - **Vite** – Blazing fast dev environment and build tool
 - **React** – Component-based frontend library
 - **Tailwind CSS** – Utility-first CSS framework for styling
-- **React Router** – For smooth page transitions
-- **Context API / Redux (Optional)** – For global state management
-
+- **React Router Dom** – For smooth page transitions
 ---
 
 ## 🧩 Features (In Progress)
