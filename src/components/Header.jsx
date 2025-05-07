@@ -7,7 +7,7 @@ const Header = ({ search, setSearch }) => {
   const [isFocused, setIsFocused] = useState(false)
 
   const handleOnclick = () => {
-    console.log('Logged in');
+    alert('Cureently Unavaialable!')
   }
 
   const count = '10'
