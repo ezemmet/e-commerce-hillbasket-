@@ -1,36 +1,42 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
-import React, { useState } from "react";
+// SubNavigation.jsx
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-
-const SubNavigation = () => {
-
-  const [show, setShow] = useState(false)
-
-  const categoriesOnClick = (e) => {
-    e.preventDefault()
-    setShow(!show)
-  }
+const SubNavigation = ({ category, setCategory }) => {
+  const [show, setShow] = useState(false);
+  const categories = ['All', 'Fruit', 'Pulses'];
 
   return (
-    <div className='h-[7vh] flex items-center justify-center'>
-      <div className="rounded-[50px] items-center justify-center flex w-[40vw] bg-[#63752c] text-[#C1C7AA] h-[7vh]">
-        <a className='mx-2 font-semibold' href="/">Home</a>
-        <div className='mx-2'>
-          <button onClick={categoriesOnClick} className="relative font-semibold" href="/">Categories <FontAwesomeIcon icon={faCaretDown} className={`transform transition-transform duration-300 ${!show ? 'rotate-180' : 'rotate-0'}`} /></button>
+    <div className="h-[7vh] flex items-center justify-center bg-[#1e293bee] text-[#F1F5F9]">
+      <div className="rounded-full flex items-center justify-center w-[40vw] h-[7vh] relative">
+        <a className="mx-2" href="/">Home</a>
+        <div className="mx-2 relative">
+          <button onClick={() => setShow(!show)} className='cursor-pointer'>
+            Categories <FontAwesomeIcon icon={faCaretDown} className={`ml-1 transition-transform ${!show ? 'rotate-180' : 'rotate-0'}`} />
+          </button>
           {show && (
-            <div className={`absolute flex flex-col text-center`}>
-              <a href="/" className='hover:text-[#C2782B] font-semibold'>Fruits</a>
-              <a href="/" className='hover:text-[#C2782B] font-semibold'>Vegetable</a>
+            <div className="absolute mt-2 border border-white rounded-[0.3rem] z-10">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setCategory(cat);
+                    setShow(false);
+                  }}
+                  className={`block w-full px-4 py-2 text-left ${category === cat ? 'text-green-600' : 'text-white'}`}
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
           )}
         </div>
-        <a className='mx-2 font-semibold' href="/">Contact</a>
-        <a className='mx-2 font-semibold' href="/">Blog</a>
+        <a className="mx-2" href="/">Contact</a>
+        <a className="mx-2" href="/">Blog</a>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default SubNavigation
+export default SubNavigation;
