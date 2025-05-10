@@ -1,4 +1,4 @@
-import { Footer, Header, Main, Products, SubNavigation } from './js-files/import-components'
+import { Footer, Header, Main, Products, SubNavigation, Testimonial } from './js-files/import-components'
 import React, { useState } from 'react'
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
       </div>
       <Main />
       <Products search={search} category={category} />
+      <Testimonial />
       <Footer />
     </div>
   )
