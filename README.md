@@ -16,8 +16,8 @@
 
 - ✅ Clean and responsive UI  
 - 🛍️ Product listings  
-- 🛒 Cart functionality  
 - 🔍 Product filtering and search  
+- 🛒 Cart functionality  (Coming soon)
 - 💳 Payment integration (Coming soon)  
 - 👤 User authentication (Coming soon)  
 - 📦 Order history and tracking (Coming soon)
@@ -27,6 +27,11 @@
 ## 📸 Screenshots
 
 <!-- screenshots -->
+
+![Homepage Screenshot](/src/images/main-ss.png)
+![Products Screenshot](/src/images/products-ss.png)
+![Testimonial Screenshot](/src/images/testimonial-ss.png)
+![Responsive Screenshot](/src/images/responsive-ss.png)
 
 ---
 
